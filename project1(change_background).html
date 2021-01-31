@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change background</title>
+</head>
+<body>
+    <button onclick="background()" class="button" id="button">Click Me</button>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body{
+            background-color: #ff70fb;
+        }
+        .button{
+            border: 0;
+            background-color: #1eff44;
+            border-radius: 5px;
+            padding: 10px 20px;
+            display: block;
+            margin: 2rem auto;
+            font-family: sans-serif;
+            outline: none;
+            cursor: pointer;
+            font: 1em sans-serif;
+            color: blue;
+        }
+
+
+        #button {
+            text-decoration: none;
+        }
+
+
+        .button:hover {
+            background-color: #ff70fb;
+            transition: 1s;
+        }
+
+    </style>
+            <script>
+                function background() {
+                    alert("It is working");
+                    //to target an element by class you have to use index of it like in this case [0]
+                    document.getElementsByClassName("button")[0].style.color = "white";
+                    //you also have to use index in tagname
+                    document.getElementsByTagName("body")[0].style.backgroundColor = "black";
+                    //you don't have to use index in id as id is unique
+                    document.getElementById("button").style.textDecoration = "underline";                    
+                }
+
+             </script>
+              </body>
+</html>
