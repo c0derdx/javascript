@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar toggle</title>
+</head>
+
+<body>
+    <nav>
+        <label>Web</label>
+        <label class="hamburger" onclick="toggle()">☰</label>
+        <ul class="navlinks" id="navbar">
+            <li class="links">Home</li>
+            <li class="links">About</li>
+            <li class="links">Services</li>
+            <li class="links">Contact</li>
+        </ul>
+    </nav>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+
+
+        nav {
+            background-color: aqua;
+            height: 40px;
+        }
+
+
+        .navlinks {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            background-color: aqua;
+            transform: scale(1, 0);
+            transform-origin: top;
+            transition: transform 400ms ease-in-out;
+            width: 100%;
+        }
+
+
+        .navtoggle {
+            transform: scale(1, 1);
+        }
+
+
+        .hamburger {
+            margin: 5px;
+            float: right;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function toggle() {
+
+            if (document.getElementById('navbar').classList.contains('navtoggle')) {
+                document.getElementById('navbar').classList.remove('navtoggle');
+            } else {
+                document.getElementById('navbar').classList.add('navtoggle');
+            }
+
+        }
+    </script>
+</body>
+
+</html>
