@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change background</title>
+</head>
+
+<body>
+    <h1>Enter the value of background color</h1>
+    <input type="text" id="colorvalue" value="">
+    <button onclick="background()" class="button" id="button">Click Me</button>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            background-color: #ff70fb;
+            font-family: sans-serif;
+            text-align: center;
+            height: 100vh;
+        }
+
+
+        h1 {
+            margin-top: 10rem;
+        }
+
+        .button {
+            border: 0;
+            background-color: #1eff44;
+            border-radius: 5px;
+            padding: 10px 20px;
+            display: block;
+            margin: 0.3rem auto;
+            font-family: sans-serif;
+            outline: none;
+            cursor: pointer;
+            font: 1em sans-serif;
+            color: blue;
+        }
+
+
+        #button {
+            text-decoration: none;
+        }
+
+
+        .button:hover {
+            background-color: #ff70fb;
+            transition: 1s;
+        }
+
+
+        input {
+            display: block;
+            margin: 1rem auto 0;
+            height: 30px;
+            width: 200px;
+            border-radius: 5px;
+            outline: none;
+            border: 0;
+            background-color: #1eff44;
+        }
+    </style>
+    <script>
+        function background() {
+            //In this line I am assigning the value of colorvalue(input field) by this tag
+            let x = document.getElementById("colorvalue").value;
+            if (x == 0) {
+                alert("Please Enter color");
+            } else {
+                document.getElementsByTagName("body")[0].style.backgroundColor = x;
+                alert("Background Changed");
+            }
+        }
+    </script>
+</body>
+
+</html>
