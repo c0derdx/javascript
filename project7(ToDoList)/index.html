@@ -1,39 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>change background</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
-
 <body>
-    <h1>Enter the value of background color</h1>
-    <input type="text" id="work" value="">
-    <button class="button" id="btn">Click Me</button>
-    <div id="container"></div>
-    <script>
-        let i = 0;
-        const btn = document.getElementById('btn');
-        btn.addEventListener('click', () => {
-            let x = document.getElementById('work').value;
-            const newDiv = document.createElement('div');
-            const taskName = document.createElement('p');
-            const closeBtn = document.createElement('div');
-            newDiv.className = 'list';
-            taskName.className = 'taskName';
-            closeBtn.className = 'closeBtn';
-            taskName.innerHTML = x;
-            closeBtn.innerHTML = '&#10006';
-            // newDiv.innerHTML = x;
-            console.log(x);
-            document.getElementById('container').appendChild(newDiv);
-            document.getElementsByClassName('list')[i].appendChild(taskName);
-            document.getElementsByClassName('list')[i].appendChild(closeBtn);
-            console.log(i);
-            i++;
-        });
-    </script>
+    <div class="container">
+        <h1>ToDo List</h1>
+        <div class="inputArea">
+        <input class="inputText" type="text">
+        <button class="btn" type="submit">Add</button>
+        </div>
+        
+        <div class="list-container">
+        
+        </div>
+    </div>
+    <script src="main.js"></script>    
 </body>
-
 </html>
